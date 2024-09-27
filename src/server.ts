@@ -24,4 +24,6 @@ app.post("/create-appointments", async (req, res) => {
   res.json(appointments);
 });
 
-app.listen(3333, () => console.log("server listening on"));
+const port = 3333;
+
+app.listen(process.env.PORT || port, () => console.log("server listening on"));
